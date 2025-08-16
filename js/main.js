@@ -75,6 +75,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Add click handler to Get Started button in header
+    const headerGetStartedButton = document.querySelector('nav button.bg-primary');
+    if (headerGetStartedButton) {
+        headerGetStartedButton.addEventListener('click', function() {
+            scrollToSection('contact');
+        });
+    }
+    
     // Add click handlers to hero CTA buttons
     const exploreButton = document.querySelector('button:has-text("Explore Our Services")') || 
                          Array.from(document.querySelectorAll('button')).find(btn => btn.textContent.includes('Explore Our Services'));
@@ -240,16 +248,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const startTransformButtons = document.querySelectorAll('button');
     startTransformButtons.forEach(button => {
         if (button.textContent.includes('Start Your Transformation Today')) {
-            button.addEventListener('click', function() {
-                scrollToSection('contact');
-            });
-        }
-    });
-    
-    // Handle Get Started buttons
-    const getStartedButtons = document.querySelectorAll('button');
-    getStartedButtons.forEach(button => {
-        if (button.textContent.trim() === 'Get Started') {
             button.addEventListener('click', function() {
                 scrollToSection('contact');
             });
