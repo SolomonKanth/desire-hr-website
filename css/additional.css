@@ -1,0 +1,192 @@
+/* Additional CSS for custom components */
+
+/* Hero Background */
+.hero-bg {
+  background-image: url('../images/hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Service Cards */
+.service-card {
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  background: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(210 40% 98%) 100%);
+  box-shadow: var(--shadow-card);
+  transition: all 0.5s ease;
+}
+
+.service-card:hover {
+  box-shadow: var(--shadow-elevated);
+  border-color: hsl(var(--primary) / 0.2);
+  transform: translateY(-8px);
+}
+
+.service-card .group-hover\:bg-primary\/20:hover {
+  background: hsl(var(--primary) / 0.2);
+}
+
+.service-card .group-hover\:text-primary-dark:hover {
+  color: hsl(var(--primary-dark));
+}
+
+.service-card h3:hover {
+  color: hsl(var(--primary));
+}
+
+/* Stats Cards */
+.stats-card {
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  background: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(210 40% 98%) 100%);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  padding: 2rem;
+  transition: all 0.5s ease;
+}
+
+.stats-card:hover {
+  box-shadow: var(--shadow-elevated);
+  border-color: hsl(var(--primary) / 0.2);
+  transform: translateY(-4px);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%);
+  border-radius: 1.5rem;
+  padding: 3rem 4rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, hsl(var(--primary) / 0.9) 0%, hsl(var(--primary)) 50%, hsl(var(--primary-dark)) 100%);
+  opacity: 0.95;
+}
+
+/* Team Cards */
+.team-card {
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  box-shadow: var(--shadow-glow);
+  border-color: hsl(var(--primary) / 0.3);
+}
+
+.team-avatar {
+  width: 6rem;
+  height: 6rem;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1.5rem;
+}
+
+.specialty-tag {
+  font-size: 0.75rem;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.social-button {
+  padding: 0.5rem;
+  color: hsl(var(--muted-foreground));
+  transition: color 0.3s ease;
+}
+
+.social-button:hover {
+  color: hsl(var(--primary));
+}
+
+/* Contact Cards */
+.contact-card {
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  background: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(210 40% 98%) 100%);
+  box-shadow: var(--shadow-card);
+  padding: 2.5rem;
+  transition: all 0.5s ease;
+}
+
+.contact-card:hover {
+  box-shadow: var(--shadow-elevated);
+  border-color: hsl(var(--primary) / 0.2);
+  transform: translateY(-4px);
+}
+
+/* Emergency Cards */
+.emergency-card {
+  background: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(210 40% 98%) 100%);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  border: 1px solid hsl(var(--border) / 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.emergency-card:hover {
+  box-shadow: var(--shadow-card);
+}
+
+.social-link {
+  color: hsl(var(--primary));
+  font-weight: bold;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: hsl(var(--primary-dark));
+}
+
+/* Footer Social Buttons */
+.footer-social-btn {
+  padding: 0.5rem;
+  background: hsl(var(--primary-foreground) / 0.1);
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.footer-social-btn:hover {
+  background: hsl(var(--primary-foreground) / 0.2);
+}
+
+/* Animation Delays */
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}

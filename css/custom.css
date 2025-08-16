@@ -1,0 +1,149 @@
+/* Custom CSS Variables and Animations */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 220 13% 18%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 13% 18%;
+  --primary: 210 100% 40%;
+  --primary-foreground: 0 0% 98%;
+  --primary-light: 210 100% 55%;
+  --primary-glow: 210 100% 65%;
+  --primary-dark: 210 100% 30%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 220 13% 18%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 220 8.9% 46.1%;
+  --accent: 25 95% 53%;
+  --accent-foreground: 0 0% 98%;
+  --border: 220 13% 91%;
+  --gradient-professional: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+  --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%);
+  --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(210 40% 99%));
+  --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(210 40% 98%) 100%);
+  --shadow-card: 0 2px 24px -4px hsl(var(--foreground) / 0.08), 0 4px 16px -8px hsl(var(--primary) / 0.1);
+  --shadow-glow: 0 8px 40px -12px hsl(var(--primary) / 0.25), 0 0 0 1px hsl(var(--border));
+  --shadow-professional: 0 12px 48px -12px hsl(var(--foreground) / 0.12), 0 8px 24px -8px hsl(var(--primary) / 0.15);
+  --shadow-elevated: 0 20px 64px -16px hsl(var(--foreground) / 0.15), 0 12px 32px -12px hsl(var(--primary) / 0.2);
+}
+
+/* Custom gradient classes */
+.bg-gradient-professional {
+  background: var(--gradient-professional);
+}
+
+.bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+.bg-gradient-subtle {
+  background: var(--gradient-subtle);
+}
+
+.bg-gradient-card {
+  background: var(--gradient-card);
+}
+
+/* Custom shadow classes */
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.shadow-professional {
+  box-shadow: var(--shadow-professional);
+}
+
+.shadow-elevated {
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Animation delays */
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile menu transitions */
+.mobile-menu {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.closed {
+  transform: translateX(-100%);
+}
+
+/* Additional utility classes */
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:-translate-y-1:hover {
+  transform: translateY(-0.25rem);
+}
+
+.hover\:-translate-y-2:hover {
+  transform: translateY(-0.5rem);
+}
