@@ -83,6 +83,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Add click handler to logo
+    const logo = document.querySelector('header img[alt="Desire Global Solutions"]');
+    if (logo) {
+        logo.style.cursor = 'pointer';
+        logo.addEventListener('click', function() {
+            scrollToSection('home');
+        });
+    }
+    
     // Add click handlers to hero CTA buttons
     const exploreButton = document.querySelector('button:has-text("Explore Our Services")') || 
                          Array.from(document.querySelectorAll('button')).find(btn => btn.textContent.includes('Explore Our Services'));

@@ -17,9 +17,13 @@
     <meta name="twitter:image" content="images/logo.jpg">
     
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/additional.css">
+    <script>
+        // Dynamic cache busting
+        const version = new Date().getTime();
+        document.write('<link rel="stylesheet" href="css/styles.css?v=' + version + '">');
+        document.write('<link rel="stylesheet" href="css/custom.css?v=' + version + '">');
+        document.write('<link rel="stylesheet" href="css/additional.css?v=' + version + '">');
+    </script>
 </head>
 <body>
     <div class="min-h-screen">
@@ -747,6 +751,9 @@
         </footer>
     </div>
 
-    <script src="js/main.js"></script>
+    <script>
+        // Dynamic cache busting for main.js
+        document.write('<script src="js/main.js?v=' + new Date().getTime() + '"><\/script>');
+    </script>
 </body>
 </html>
