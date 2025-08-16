@@ -76,12 +76,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Add click handler to Get Started button in header
+    // Commenting out to test cache busting
+    /*
     const headerGetStartedButton = document.querySelector('nav button.bg-primary');
     if (headerGetStartedButton) {
         headerGetStartedButton.addEventListener('click', function() {
             scrollToSection('contact');
         });
     }
+    */
     
     // Add click handler to logo
     const logo = document.querySelector('header img[alt="Desire Global Solutions"]');
