@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button onclick="scrollToSection('about')" class="text-foreground hover:text-primary transition-colors font-medium block py-2 text-left">About</button>
                 <button onclick="scrollToSection('team')" class="text-foreground hover:text-primary transition-colors font-medium block py-2 text-left">Team</button>
                 <button onclick="scrollToSection('contact')" class="text-foreground hover:text-primary transition-colors font-medium block py-2 text-left">Contact</button>
-                <button class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full">
+                <button onclick="scrollToSection('contact')" class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full">
                     Get Started
                 </button>
             </div>
@@ -240,6 +240,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const startTransformButtons = document.querySelectorAll('button');
     startTransformButtons.forEach(button => {
         if (button.textContent.includes('Start Your Transformation Today')) {
+            button.addEventListener('click', function() {
+                scrollToSection('contact');
+            });
+        }
+    });
+    
+    // Handle Get Started buttons
+    const getStartedButtons = document.querySelectorAll('button');
+    getStartedButtons.forEach(button => {
+        if (button.textContent.trim() === 'Get Started') {
             button.addEventListener('click', function() {
                 scrollToSection('contact');
             });
